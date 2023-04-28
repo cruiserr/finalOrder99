@@ -21,6 +21,7 @@ public class Order {
     private Customer customer;
 
 
+    private int sellerId;
 
     private int total;
 
@@ -55,6 +56,7 @@ public class Order {
         this.sellerShipping = sellerAddress;
         this.customerAddress = customerShipping;
         this.paymentMethod = payment;
+        this.sellerId = orderDto.getSellerId();
 
 
     }
@@ -121,5 +123,13 @@ public class Order {
 
     public void setSellerShipping(SellerShippingAddress sellerShipping) {
         this.sellerShipping = sellerShipping;
+    }
+
+    public int getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(int sellerId) {
+        this.sellerId = sellerId;
     }
 }

@@ -6,6 +6,8 @@ public class OrderDto {
 
     private CustomerDto customer;
 
+    private int sellerId;
+
 
     private int total;
 
@@ -71,5 +73,11 @@ public class OrderDto {
         this.customer = customer;
     }
 
+    public int getSellerId() {
+        return sellerId;
+    }
 
+    public void setSellerId(int sellerId) {
+        this.sellerId = sellerId;
+    }
 }

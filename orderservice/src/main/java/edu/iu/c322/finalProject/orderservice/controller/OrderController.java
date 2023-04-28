@@ -46,6 +46,7 @@ public class OrderController {
     private OrderDto convertToDto(Order order) {
         OrderDto orderDto = new OrderDto();
         orderDto.setTotal(order.getTotal());
+        orderDto.setSellerId(order.getSellerId());
 
         Customer customer = customerRepository.findById(order.getCustomer().getId()).orElse(null);
         if(customer != null){
